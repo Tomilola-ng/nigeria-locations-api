@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nigeria Locations API</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        font-family: "Afacad Flux", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "slnt" 0;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-4">
+            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+            <svg
+              width="50px"
+              height="50px"
+              viewBox="0 0 36 36"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              role="img"
+              class="iconify iconify--twemoji"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <path
+                fill="#009A49"
+                d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z"
+              ></path>
+              <path fill="#EEE" d="M12 5h12v26H12z"></path>
+              <path
+                fill="#009A49"
+                d="M32 5h-8v26h8a4 4 0 0 0 4-4V9a4 4 0 0 0-4-4z"
+              ></path>
+            </svg>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#features" class="text-gray-600 hover:text-gray-900"
+              >Features</a
+            >
+            <a href="#documentation" class="text-gray-600 hover:text-gray-900"
+              >Documentation</a
+            >
+            <a href="#get-started" class="text-gray-600 hover:text-gray-900"
+              >Get Started</a
+            >
+            <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
+          </div>
+          <div>
+            <a
+              href="https://github.com/Tomilola-ng/nigeria-locations-api"
+              class="bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-4 py-20">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-5xl font-bold text-gray-900 mb-6">
+              Nigeria Locations API
+            </h1>
+            <p class="text-xl text-gray-600 mb-8">
+              A comprehensive dataset of all Nigerian states and their local
+              government areas (LGAs), perfect for developers building
+              location-aware applications.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#get-started"
+                class="bg-[#18b763] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+                >Get Started</a
+              >
+              <a
+                href="#documentation"
+                class="border-2 border-gray-800 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+                >View Docs</a
+              >
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://tomilola-ng.github.io/images/ngn-location-api-hero-img.jpeg"
+              alt="Nigeria Map Visualization"
+              class="rounded-xl shadow-lg"
+            />
+            <div
+              class="absolute bottom-1/2 right-6 bg-white p-4 rounded-lg shadow-lg"
+            >
+              <p class="text-sm font-semibold">37 States + FCT</p>
+              <p class="text-xs text-gray-600">774 Local Government Areas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="bg-gray-100 py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Features</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Everything you need to integrate Nigerian location data into your
+          applications
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-[#18b763]"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Easy-to-Use JSON Format</h3>
+            <p class="text-gray-600">
+              Ready-to-use data structure for web and mobile applications with
+              clean, organized JSON formatting.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div
+              class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Complete Data</h3>
+            <p class="text-gray-600">
+              Comprehensive coverage of all 36 states and FCT, including every
+              local government area.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <div
+              class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">REST API</h3>
+            <p class="text-gray-600">
+              Modern REST API with comprehensive endpoints for accessing and
+              validating location data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Documentation Section -->
+    <div id="documentation" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Documentation</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Explore our API endpoints and learn how to integrate the data into
+          your projects
+        </p>
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">API Endpoints</h3>
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-lg font-medium mb-2">Get All States</h4>
+              <pre><code class="language-bash">GET /api/states</code></pre>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium mb-2">Get LGAs by State</h4>
+              <pre><code class="language-bash">GET /api/states/:state/lgas</code></pre>
+            </div>
+            <div>
+              <h4 class="text-lg font-medium mb-2">Search LGAs</h4>
+              <pre><code class="language-bash">GET /api/search?q=:searchterm</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Get Started Section -->
+    <div id="get-started" class="bg-gray-100 py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">Get Started</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Choose your preferred method to start using Nigeria Locations JSON
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- API Usage Card -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Use as API</h3>
+            <p class="text-gray-600 mb-4">
+              Access location data through our REST API endpoints
+            </p>
+            <pre
+              class="mb-4"
+            ><code class="language-bash">GET /api/states</code></pre>
+            <button
+              onclick="copyApiEndpoint()"
+              class="w-full bg-[#18b763] text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+            >
+              Copy Endpoint
+            </button>
+          </div>
+
+          <!-- Download Raw Data Card -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Download Raw Data</h3>
+            <p class="text-gray-600 mb-4">
+              Get the complete dataset in your preferred format
+            </p>
+            <div class="space-y-2">
+              <button
+                onclick="downloadData('json')"
+                class="w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+              >
+                Download JSON
+              </button>
+              <button
+                onclick="downloadData('yaml')"
+                class="w-full bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition"
+              >
+                Download YAML
+              </button>
+              <button
+                onclick="downloadData('toml')"
+                class="w-full bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition"
+              >
+                Download TOML
+              </button>
+            </div>
+          </div>
+
+          <!-- Contribute Card -->
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-4">Contribute</h3>
+            <p class="text-gray-600 mb-4">
+              Help improve the dataset by contributing to the project
+            </p>
+            <a
+              href="https://github.com/Tomilola-ng/nigeria-locations-api"
+              class="block text-center bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 transition"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="https://tomilola-ng.github.io/images/ngn-location-api-about-img.svg"
+              alt="About Project"
+            />
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold mb-6">About the Project</h2>
+            <p class="text-gray-600 mb-6">
+              Nigeria Locations JSON was created to provide developers with
+              accurate and structured location data for Nigeria. Our goal is to
+              simplify the integration of Nigerian geographical data into
+              applications and services.
+            </p>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center">
+                <svg
+                  class="w-6 h-6 text-green-600 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Regularly updated data
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-6 h-6 text-green-600 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Community-driven improvements
+              </li>
+              <li class="flex items-center">
+                <svg
+                  class="w-6 h-6 text-green-600 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                Open source and free to use
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <img
+                src="https://tomilola-ng.github.io/images/ngn-location-api-logo-img.svg"
+                alt="Logo"
+                class="rounded-lg w-10"
+              />
+              <h4 class="text-lg font-semibold">Nigeria Locations JSON</h4>
+            </div>
+            <p class="text-gray-400 mb-4">
+              Comprehensive Nigerian location data for developers
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://github.com/Tomilola-ng/nigeria-locations-api"
+                class="text-gray-400 hover:text-white"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
+                  />
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#features"
+                  class="text-gray-400 hover:text-white transition"
+                  >Features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#documentation"
+                  class="text-gray-400 hover:text-white transition"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#get-started"
+                  class="text-gray-400 hover:text-white transition"
+                  >Get Started</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="https://github.com/Tomilola-ng/nigeria-locations-api/blob/main/README.md"
+                  class="text-gray-400 hover:text-white transition"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Tomilola-ng/nigeria-locations-api/releases"
+                  class="text-gray-400 hover:text-white transition"
+                  >Release Notes</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Tomilola-ng/nigeria-locations-api/issues"
+                  class="text-gray-400 hover:text-white transition"
+                  >Report Issues</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Tomilola-ng/nigeria-locations-api/pulls"
+                  class="text-gray-400 hover:text-white transition"
+                  >Pull Requests</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Download</h4>
+            <ul class="space-y-2">
+              <li>
+                <button 
+                onclick="downloadData('json')" class="text-gray-400 hover:text-white transition"
+                  >JSON Format</a
+                >
+              </li>
+              <li>
+                <button 
+                onclick="downloadData('yaml')" class="text-gray-400 hover:text-white transition"
+                  >YAML Format</a
+                >
+              </li>
+              <li>
+                <button 
+                onclick="downloadData('toml')" class="text-gray-400 hover:text-white transition"
+                  >TOML Format</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >API Documentation</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="text-sm text-gray-400">
+              © 2025 Nigeria Locations API. All rights reserved.
+            </div>
+            <div class="flex space-x-6 md:justify-end">
+              <a
+                href="https://tomilola.com.ng"
+                class="text-sm text-gray-400 hover:text-white transition"
+              >
+                Developed By Tomi
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function copyApiEndpoint() {
+        navigator.clipboard
+          .writeText("http://localhost:3000/api/states")
+          .then(() => alert("API endpoint copied to clipboard!"))
+          .catch((err) => console.error("Failed to copy:", err));
+      }
+
+      function downloadData(format) {
+        const baseUrl =
+          "https://raw.githubusercontent.com/Tomilola-ng/nigeria-locations-api/main/data/";
+        const files = {
+          json: "v1-data.json",
+          yaml: "v1-data.yaml",
+          toml: "v1-data.toml",
+        };
+
+        window.location.href = baseUrl + files[format];
+      }
+
+      // Initialize Prism.js
+      Prism.highlightAll();
+    </script>
+  </body>
+</html>
