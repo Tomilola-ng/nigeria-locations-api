@@ -52,10 +52,10 @@ npm install
 
 2. Start the development server:
 ```bash
-npm run dev
+npm start
 ```
 
-3. Access the API at `http://localhost:3000`
+3. Access the API at `http://localhost:3000/api/states`
 
 ### 🔒 CORS Support
 The API includes CORS support, allowing it to be accessed from different domains.
@@ -82,7 +82,7 @@ The JSON data is organized in the following format:
 ## 🧰 Usage
 
 1. Give this [Repository](https://github.com/Tomilola-ng/nigeria-locations-json.git) a Star:
-2. Download and Import the [LATEST JSON](v1-data.json) or [LATEST YAML](v1-data.yaml) file into your project.
+2. Download and Import the [LATEST JSON](data/v1-data.json) or [LATEST YAML](data/v1-data.yaml) file into your project.
 3. Parse and use the data as needed.
 
 ## 🧑‍🤝‍🧑 Contributions
