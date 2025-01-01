@@ -15,8 +15,8 @@ The JSON data is organized in the following format:
 ```json
 [
   {
-    "state": "State Name",
-    "lgas": ["LGA 1", "LGA 2", "LGA 3", ...]
+    "state": "lagos",
+    "localGovt": ["Alimosho", "Agege", ...]
   },
   ...
 ]
@@ -24,11 +24,8 @@ The JSON data is organized in the following format:
 
 ## 🧰 Usage
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Tomilola-ng/nigeria-locations-json.git
-   ```
-2. Import the JSON file into your project.
+1. Give this [Repository](https://github.com/Tomilola-ng/nigeria-locations-json.git) a Star:
+2. Download and Import the [LATEST JSON](v1-data.json) file into your project.
 3. Parse and use the data as needed.
 
 ## 🧑‍🤝‍🧑 Contributions
