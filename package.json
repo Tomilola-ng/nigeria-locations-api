@@ -1,0 +1,22 @@
+{
+  "name": "nigeria-locations-json",
+  "version": "1.0.0",
+  "description": "API for Nigerian States and Local Government Areas",
+  "main": "src/api/server.js",
+  "scripts": {
+    "start": "node src/api/server.js",
+    "dev": "nodemon src/api/server.js"
+  },
+  "keywords": [
+    "nigeria",
+    "locations",
+    "api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
